@@ -6,11 +6,11 @@
     </a>
     <ul class="nav nav-pills">
       <!-- <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li> -->
-      <li class="nav-item"><a href="#" class="nav-link">Recipes</a></li>
-      <li class="nav-item"><a href="#" class="nav-link">Shopping List</a></li>
-      <li class="nav-item dropdown">
+      <li class="nav-item"><a href="#" class="nav-link" (click) = "onSelect('recipe')">Recipes</a></li>
+      <li class="nav-item"><a href="#" class="nav-link" (click) = "onSelect('shopping-list')">Shopping List</a></li>
+      <li class="nav-item dropdown" appDropdown>
           <a href="#" class=" nav-link dropdown-toggle" role="button">Manage</a>
-          <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+          <ul class="dropdown-menu text-small shadow mar-left">
             <li><a class="dropdown-item" href="#">New project...</a></li>
             <li><a class="dropdown-item" href="#">Settings</a></li>
             <li><a class="dropdown-item" href="#">Profile</a></li>

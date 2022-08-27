@@ -8,31 +8,12 @@
 <hr />
 <div class="row">
   <div class="col-xs-12">
-    <div class="list-group" *ngFor="let recipe of recipes">
-      <a href="#" class="list-group-item list-group-item-action clearfix">
-        <div class="float-start" style="width: 180px;">
-           <h4 class="list-group-item-heading">{{recipe.name}}</h4>
-           <p class="" style="font-size: 0.8em">{{recipe.description}}</p>
-        </div>
-       <div class="float-end">
-           <img [src]="recipe.imagePath" [alt]="recipe.name" class="img-responsive" height="80" width="100" />
-       </div>
-      </a>
 
-      <a href="#" class="list-group-item list-group-item-action clearfix">
-        <div class="float-start" style="width: 180px;">
-           <h4 class="list-group-item-heading">{{recipe.name}}</h4>
-           <p class="" style="font-size: 0.8em">{{recipe.description}}</p>
-        </div>
-       <div class="float-end">
-           <img [src]="recipe.imagePath" [alt]="recipe.name" class="img-responsive" height="80" width="100" />
-       </div>
-      </a>
 
+    <div class="list-group">
+      <app-recipe-item *ngFor="let recipeItem of recipes" [recipe] = "recipeItem" (selectedRecipe) ="onSetRecipeDetail(recipeItem)"></app-recipe-item>
     </div>
 
-
-    <app-recipe-item></app-recipe-item>
   </div>
 </div>
 
